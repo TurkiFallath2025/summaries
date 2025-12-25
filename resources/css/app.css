@@ -1,0 +1,459 @@
+body {
+    margin: 0;
+    font-family: "Inter", "Tahoma", sans-serif;
+    background: #222831;      /* خلفية الموقع */
+    color: #EEEEEE;           /* لون النص */
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 70px;
+    background: #393E46;      /* لون الهيدر */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+
+    z-index: 1000;
+}
+
+/* روابط الناف بار */
+.navbar a {
+    text-decoration: none;
+    color: #00ADB5;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover */
+.navbar a:hover {
+    color: #EEEEEE;
+    transform: translateY(-2px);
+}
+
+/* الشعار */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ADB5;
+}
+
+/* حل تداخل المحتوى */
+body {
+    padding-top: 70px;
+}
+
+
+/* ===== Hero ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #EEEEEE;
+}
+
+.hero p {
+    color: #B0BEC5;
+    margin-bottom: 30px;
+}
+
+/* زر إضافة ملخص */
+.main-btn {
+    background: #00ADB5;
+    color: #222831;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.main-btn:hover {
+    background: #00cfd8;
+}
+
+/* ===== Cards ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+/* ===== Card ===== */
+.card {
+    background: #393E46;
+    height: 160px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transition: 0.3s ease;
+
+    /* تمركز المحتوى */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* حركة */
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.85);
+}
+
+/* ===== Icon ===== */
+.card .icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+    transform: scale(1.2);
+}
+
+/* ===== Title ===== */
+.card h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+/* ===== Text ===== */
+.card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #d1d5db;
+    margin: 0;
+    max-width: 200px;
+}
+
+
+.logout {
+    background-color: transparent;
+    color: #ef4444;
+    border: 2px solid #ef4444;
+    padding: 5px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+
+/* === حاوية الصفحة الرئيسية === */
+.main-content {
+    max-width: 80rem;       /* عرض الصفحة */
+    margin: 3rem auto;      /* توسيط */
+    padding: 0 1rem;
+}
+
+/* === الهيدر (العنوان + الزر) === */
+.page-header {
+    display: flex;
+    justify-content: space-between; /* تباعد لأقصى اليمين واليسار */
+    align-items: center;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e5e7eb; /* خط فاصل رمادي فاتح */
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* === زر الإضافة الأساسي === */
+.btn-add-new {
+    background-color: #00ADB5;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-add-new:hover {
+    background-color: #008c93;
+    transform: translateY(-2px); /* حركة خفيفة للأعلى */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+/* === رسالة النجاح === */
+.alert-box.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #6ee7b7;
+}
+
+/* === الحالة الفارغة === */
+.empty-state-box {
+    background-color: white;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px dashed #d1d5db;
+}
+
+.empty-icon { font-size: 4rem; margin-bottom: 1rem; }
+.empty-text { font-size: 1.25rem; font-weight: 600; color: #4b5563; }
+.empty-subtext { color: #9ca3af; margin-top: 0.5rem; }
+
+/* === شبكة البطاقات === */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* تجاوب تلقائي */
+    gap: 1.5rem;
+}
+
+/* === تصميم البطاقة === */
+.summary-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #f3f4f6;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.card-text {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* === أزرار التحكم (تعديل/حذف) === */
+.card-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f9fafb;
+    display: flex;
+    justify-content: flex-end; /* الأزرار لليسار */
+    gap: 10px;
+}
+
+.btn-action {
+    padding: 5px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+/* زر التعديل */
+.btn-action.edit {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+.btn-action.edit:hover { background-color: #c7d2fe; }
+
+/* زر الحذف */
+.btn-action.delete {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+.btn-action.delete:hover { background-color: #fecaca; }
+
+/* === تنسيقات صفحة إنشاء/تعديل ملخص === */
+
+/* الحاوية التي تحمل الفورم */
+.form-container {
+    max-width: 600px;       /* عرض مناسب للفورم */
+    margin: 3rem auto;      /* توسيط الصفحة */
+    background: white;      /* خلفية بيضاء */
+    padding: 2rem;          /* هوامش داخلية */
+    border-radius: 12px;    /* حواف دائرية */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* ظل خفيف */
+}
+
+/* عنوان الصفحة */
+.form-title {
+    color: #00ADB5;         /* اللون الأساسي */
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* رسائل الخطأ */
+.alert-error {
+    background-color: #fef2f2;
+    color: #ef4444;
+    border: 1px solid #fecaca;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* تجميع كل حقل (Label + Input) */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* تسمية الحقول */
+.form-label {
+    display: block;         /* يجعلها في سطر منفصل */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;         /* لون رمادي غامق */
+}
+
+/* الحقول (Input & Textarea) */
+.form-input, .form-textarea {
+    width: 100%;            /* عرض كامل */
+    padding: 0.75rem;       /* مساحة للكتابة */
+    border: 1px solid #d1d5db; /* حدود رمادية */
+    border-radius: 8px;
+    font-family: inherit;   /* نفس خط الموقع */
+    transition: all 0.3s ease;
+    background-color: #f9fafb; /* خلفية رمادية فاتحة جداً */
+    color: black;
+}
+
+/* تأثير عند الضغط للكتابة داخل الحقل */
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #00ADB5;       /* يتلون الإطار باللون الأساسي */
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.1); /* توهج خفيف */
+}
+
+/* زر الحفظ */
+.btn-submit {
+    background-color: #00ADB5;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;             /* الزر بعرض كامل (شكل عصري) */
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #008c93; /* لون أغمق قليلاً عند التحويم */
+}
+
+/* زر الإلغاء */
+.btn-cancel {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.btn-cancel:hover {
+    text-decoration: underline;
+    color: #374151;
+}
+
+/* ===== الفوتر(Footer) ===== */
+footer {
+    background: #393E46;
+    padding: 20px 30px;
+    margin-top: auto; /* تأكيد بقاء الفوتر في الأسفل */
+    border-top: 3px solid #00ADB5;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* الحقوق يمين والروابط يسار */
+    align-items: center;
+    flex-wrap: wrap; /* عشان يترتبوا في الجوال */
+    gap: 15px;
+}
+
+.copyright {
+    color: #EEEEEE;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #00ADB5;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+/* تحسين للشاشات الصغيرة */
+@media (min-width: 640px) {
+    .form-footer {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-direction: row-reverse; /* يجعل زر الحفظ أولاً */
+    }
+    .btn-submit {
+        width: auto; /* الزر يأخذ حجم النص فقط في الشاشات الكبيرة */
+    }
+    .btn-cancel {
+        margin-top: 0;
+    }
+}
+
+

@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: "Inter", "Tahoma", sans-serif;
+    background: #222831;      /* خلفية الموقع */
+    color: #EEEEEE;           /* لون النص */
+}
+
+/* ===== Navbar ===== */
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 70px;
+    background: #393E46;      /* لون الهيدر */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+
+    z-index: 1000;
+}
+
+/* روابط الناف بار */
+.navbar  a  {
+    text-decoration: none;
+    color: #00ADB5;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover */
+.navbar  a:hover {
+    color: #EEEEEE;
+    transform: translateY(-2px);
+}
+
+/* الشعار */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ADB5;
+}
+
+/* حل تداخل المحتوى */
+body {
+    padding-top: 70px;
+}
+
+
+/* ===== Hero ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #EEEEEE;
+}
+
+.hero p {
+    color: #B0BEC5;
+    margin-bottom: 30px;
+}
+
+/* زر إضافة ملخص */
+.main-btn {
+    background: #00ADB5;
+    color: #222831;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.main-btn:hover {
+    background: #00cfd8;
+}
+
+/* ===== Cards ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+/* ===== Card ===== */
+.card {
+    background: #393E46;
+    height: 160px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transition: 0.3s ease;
+
+    /* تمركز المحتوى */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* حركة */
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.85);
+}
+
+/* ===== Icon ===== */
+.card .icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+    transform: scale(1.2);
+}
+
+/* ===== Title ===== */
+.card h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+/* ===== Text ===== */
+.card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #d1d5db;
+    margin: 0;
+    max-width: 200px;
+}
+
+.logout {
+    background-color: transparent; /* خلفية شفافة */
+    color: #ef4444;               /* لون أحمر */
+    border: 1px solid #ef4444;    /* إطار أحمر */
+    padding: 5px 15px;            /* مسافات داخلية */
+    border-radius: 5px;           /* حواف دائرية */
+    cursor: pointer;              /* شكل الفأرة يصبح يد */
+    font-weight: bold;            /* خط عريض */
+    transition: all 0.3s ease;    /* نعومة في الحركة */
+}
+
+/* عند مرور الماوس فوق الزر */
+.logout:hover {
+    background-color: #ef4444;    /* الخلفية تصبح حمراء */
+    color: white;                 /* النص يصبح أبيض */
+}
