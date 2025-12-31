@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>الصفحة الرئيسية</title>
 
-    @vite(entrypoints: ['resources/css/app.css'])
+    @vite(entrypoints: ['resources/css/dashboard.css'])
     
 
  
@@ -12,10 +12,6 @@
 <body>
 
 <!-- ===== Navbar ===== -->
-
-
-
-
 <header class="navbar">
     
     <div class="nav-right">
@@ -104,7 +100,5 @@
         </div>
     </div>
 </footer>
-
-
 </body>
 </html>
