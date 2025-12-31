@@ -238,44 +238,6 @@
     color: #374151;
 }
 
-/* ===== الفوتر(Footer) ===== */
-footer {
-    background: #393E46;
-    padding: 20px 30px;
-    margin-top: auto; /* تأكيد بقاء الفوتر في الأسفل */
-    border-top: 3px solid #00ADB5;
-    text-align: center;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; /* الحقوق يمين والروابط يسار */
-    align-items: center;
-    flex-wrap: wrap; /* عشان يترتبوا في الجوال */
-    gap: 15px;
-}
-
-.copyright {
-    color: #EEEEEE;
-    font-size: 14px;
-}
-
-.footer-links a {
-    color: #00ADB5;
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 14px;
-    transition: 0.2s;
-}
-.footer-links a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-
-
 /* تحسين للشاشات الصغيرة */
 @media (min-width: 640px) {
     .form-footer {

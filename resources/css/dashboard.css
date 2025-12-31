@@ -161,3 +161,97 @@ body {
     background-color: #ef4444;
     color: white;
 }
+
+/* ===== الفوتر(Footer) ===== */
+footer {
+    background: #393E46;
+    padding: 20px 30px;
+    margin-top: auto; /* تأكيد بقاء الفوتر في الأسفل */
+    border-top: 3px solid #00ADB5;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* الحقوق يمين والروابط يسار */
+    align-items: center;
+    flex-wrap: wrap; /* عشان يترتبوا في الجوال */
+    gap: 15px;
+}
+
+.copyright {
+    color: #EEEEEE;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #00ADB5;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 0 20px;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    body {
+        padding-top: 120px; /* لأن الهيدر صار أطول */
+    }
+
+    /* Hero */
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* Cards */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .card {
+        height: auto;
+        padding: 25px 15px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links a {
+        margin: 0 8px;
+    }
+}
+
+

@@ -5,9 +5,7 @@
     <title>الصفحة الرئيسية</title>
 
     @vite(entrypoints: ['resources/css/dashboard.css'])
-    
 
- 
 </head>
 <body>
 
