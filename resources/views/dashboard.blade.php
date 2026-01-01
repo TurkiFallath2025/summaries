@@ -91,11 +91,11 @@
             جميع الحقوق محفوظة © {{ date('Y') }} منصة ملخصاتي
         </div>
         
-        <div class="footer-links">
+        {{-- <div class="footer-links">
             <a href="#">سياسة الخصوصية</a>
             <a href="#">الشروط والأحكام</a>
             <a href="#">تواصل معنا</a>
-        </div>
+        </div> --}}
     </div>
 </footer>
 </body>

@@ -1,8 +1,13 @@
+/* الأنماط الأساسية */
 body {
     margin: 0;
     font-family: "Inter", "Tahoma", sans-serif;
-    background: #222831;      /* خلفية الموقع */
-    color: #EEEEEE;           /* لون النص */
+    background: #222831;
+    color: #EEEEEE;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ===== Navbar ===== */
@@ -11,247 +16,179 @@ body {
     top: 0;
     right: 0;
     left: 0;
-
     height: 70px;
-    background: #393E46;      /* لون الهيدر */
+    background: #393E46;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 0 40px;
+    padding: 0 5%; /* استخدام النسبة المئوية للمرونة */
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-
     z-index: 1000;
 }
 
-/* روابط الناف بار */
+.logo {
+    font-size: clamp(18px, 4vw, 24px); /* خط مرن يتغير مع حجم الشاشة */
+    font-weight: bold;
+    color: #00ADB5;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
 .navbar a {
     text-decoration: none;
     color: #00ADB5;
-    margin-left: 20px;
+    margin-right: 20px;
     font-weight: 600;
-    transition: color 0.2s ease, transform 0.2s ease;
+    font-size: 15px;
+    transition: 0.3s ease;
 }
 
-/* Hover */
 .navbar a:hover {
     color: #EEEEEE;
-    transform: translateY(-2px);
-}
-
-/* الشعار */
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #00ADB5;
 }
 
 /* حل تداخل المحتوى */
 body {
-    padding-top: 70px;
+    padding-top: 80px;
 }
 
-
-/* ===== Hero ===== */
+/* ===== Hero Section ===== */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: clamp(28px, 6vw, 42px);
+    margin-bottom: 15px;
     color: #EEEEEE;
 }
 
 .hero p {
     color: #B0BEC5;
+    font-size: clamp(14px, 2vw, 18px);
     margin-bottom: 30px;
 }
 
-/* زر إضافة ملخص */
 .main-btn {
     background: #00ADB5;
     color: #222831;
-    padding: 14px 32px;
+    padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 16px;
     font-weight: 700;
-    transition: 0.25s;
+    display: inline-block;
+    transition: 0.3s transform;
 }
 
 .main-btn:hover {
-    background: #00cfd8;
+    transform: scale(1.05);
 }
 
-/* ===== Cards ===== */
+/* ===== Responsive Grid Cards ===== */
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 40px;
+    /* تجعل الأعمدة تتغير تلقائياً حسب عرض الشاشة */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* ===== Card ===== */
 .card {
     background: #393E46;
-    height: 160px;
+    padding: 30px 20px;
     border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
     transition: 0.3s ease;
-
-    /* تمركز المحتوى */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    padding: 20px;
-    color: #fff;
 }
 
-/* حركة */
 .card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 30px 70px rgba(0,0,0,0.85);
+    transform: translateY(-10px);
 }
 
-/* ===== Icon ===== */
 .card .icon {
-    font-size: 36px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
-.card:hover .icon {
-    transform: scale(1.2);
-}
-
-/* ===== Title ===== */
 .card h3 {
-    font-size: 16px;
-    margin: 5px 0;
-    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-/* ===== Text ===== */
 .card p {
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 14px;
     color: #d1d5db;
-    margin: 0;
-    max-width: 200px;
 }
 
-
-.logout {
-    background-color: transparent;
-    color: #ef4444;
-    border: 2px solid #ef4444;
-    padding: 5px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.logout:hover {
-    background-color: #ef4444;
-    color: white;
-}
-
-/* ===== الفوتر(Footer) ===== */
+/* ===== Footer ===== */
 footer {
     background: #393E46;
-    padding: 20px 30px;
-    margin-top: auto; /* تأكيد بقاء الفوتر في الأسفل */
+    padding: 30px 5%;
+    margin-top: auto;
     border-top: 3px solid #00ADB5;
-    text-align: center;
 }
 
 .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between; /* الحقوق يمين والروابط يسار */
-    align-items: center;
-    flex-wrap: wrap; /* عشان يترتبوا في الجوال */
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.copyright {
-    color: #EEEEEE;
-    font-size: 14px;
-}
-
-.footer-links a {
-    color: #00ADB5;
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 14px;
-    transition: 0.2s;
-}
-.footer-links a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-
+/* ===== استعلامات الوسائط (Media Queries) للهواتف ===== */
 @media (max-width: 768px) {
-
-    /* Navbar */
     .navbar {
-        padding: 0 20px;
-        height: auto;
-        flex-direction: column;
-        gap: 10px;
+        padding: 0 15px;
     }
 
-    .navbar a {
-        margin-left: 10px;
-        font-size: 14px;
+    .nav-links a {
+        margin-right: 10px;
+        font-size: 13px;
     }
 
-    body {
-        padding-top: 120px; /* لأن الهيدر صار أطول */
-    }
-
-    /* Hero */
-    .hero {
-        padding: 50px 15px;
-    }
-
-    .hero h1 {
-        font-size: 26px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    /* Cards */
     .cards {
-        grid-template-columns: repeat(2, 1fr);
         padding: 20px;
-        gap: 15px;
+        /* عند الجوال نجعل الكروت تأخذ أغلب العرض لسهولة القراءة */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
-    .card {
-        height: auto;
-        padding: 25px 15px;
-    }
-
-    /* Footer */
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
-
-    .footer-links a {
-        margin: 0 8px;
-    }
 }
 
+@media (max-width: 480px) {
+    .navbar {
+        height: 60px;
+    }
+    
+    body {
+        padding-top: 70px;
+    }
 
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .cards {
+        /* عمود واحد فقط للجوالات الصغيرة جداً */
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,5 +1,5 @@
 <x-app-layout>
-
+<title>تعديل الملخص</title>
     <div class="form-container">
 
         <h2 class="form-title">

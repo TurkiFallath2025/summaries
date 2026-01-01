@@ -1,4 +1,5 @@
 <x-app-layout>
+    <title>إضافة ملخص</title>
     
     <div class="form-container">
 
